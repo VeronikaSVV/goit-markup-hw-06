@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -51,6 +51,83 @@
             </li>
           </ul>
         </address>
+
+        <button class="burger-btn" type="button">
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu">
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-close" type="button">
+            <svg class="icon-close-mobile" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="nav-menu-mobile">
+            <ul class="nav-list-mobile">
+              <li class="nav-item-mobile">
+                <a class="nav-link-mobile" href="./index.html">Studio</a>
+              </li>
+              <li class="nav-item-mobile">
+                <a class="nav-link-mobile" href="">Portfolio</a>
+              </li>
+              <li class="nav-item-mobile">
+                <a class="nav-link-mobile" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="contacts-mobile">
+            <ul class="contacts-list-mobile">
+              <li class="contacts-item-mobile">
+                <a class="contacts-link-mobile" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts-item-mobile">
+                <a class="contacts-link-mobile" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="icons-mobile">
+            <ul class="icon-list-mobile">
+              <li class="icon-item-mobile">
+                <a class="icon-link-mobile" href="#">
+                  <svg class="mobile-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram-2"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="icon-item-mobile">
+                <a class="icon-link-mobile" href="#">
+                  <svg class="mobile-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter-1"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="icon-item-mobile">
+                <a class="icon-link-mobile" href="#">
+                  <svg class="mobile-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook-1"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="icon-item-mobile">
+                <a class="icon-link-mobile" href="#">
+                  <svg class="mobile-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -122,6 +199,7 @@
           <ul class="team-list">
             <li class="team-items">
               <img
+                srcset="./images/img-3.jpg 1x, ./images/img-3-2x.jpg 2x"
                 src="./images/img-3.jpg"
                 alt="Photo Mark Guerrero"
                 width="264"
@@ -169,6 +247,7 @@
             </li>
             <li class="team-items">
               <img
+                srcset="./images/img-2.jpg 1x, ./images/img-2-2x.jpg 2x"
                 src="./images/img-2.jpg"
                 alt="Photo Tom Ford"
                 width="264"
@@ -217,6 +296,7 @@
             </li>
             <li class="team-items">
               <img
+                srcset="./images/img-1.jpg 1x, ./images/img-1-2x.jpg 2x"
                 src="./images/img-1.jpg"
                 alt="Photo Camila Garcia"
                 width="264"
@@ -265,6 +345,7 @@
             </li>
             <li class="team-items">
               <img
+                srcset="./images/img.jpg 1x, ./images/img-2x.jpg 2x"
                 src="./images/img.jpg"
                 alt="Photo Daniel Wilson"
                 width="264"
@@ -319,12 +400,33 @@
           <ul class="list-portfolio">
             <li class="items-portfolio">
               <div class="portfolio-thumb">
-                <img
-                  src="./images/img01.jpg"
-                  alt="Screen Banking App"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/img01-mob.jpg    1x,
+                      ./images/img01-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img01-tab.jpg    1x,
+                      ./images/img01-tab-2x.jpg 2x
+                    "
+                    media="(max-width: 1157px)"
+                  />
+                  <source
+                    srcset="./images/img01.jpg 1x, ./images/img01-2x.jpg 2x"
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/img01.jpg"
+                    alt="Screen Banking App"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
+
                 <div class="portfolio-overlay">
                   <p class="overlay-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -340,12 +442,32 @@
             </li>
             <li class="items-portfolio">
               <div class="portfolio-thumb">
-                <img
-                  src="./images/img02.jpg"
-                  alt="Cashless Payment"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/img02-mob.jpg    1x,
+                      ./images/img02-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img02-tab.jpg    1x,
+                      ./images/img02-tab-2x.jpg 2x
+                    "
+                    media="(max-width: 1157px)"
+                  />
+                  <source
+                    srcset="./images/img02.jpg 1x, ./images/img02-2x.jpg 2x"
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/img02.jpg"
+                    alt="Cashless Payment"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="portfolio-overlay">
                   <p class="overlay-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -361,12 +483,32 @@
             </li>
             <li class="items-portfolio">
               <div class="portfolio-thumb">
-                <img
-                  src="./images/img03.jpg"
-                  alt="Laptop & phone"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/img03-mob.jpg    1x,
+                      ./images/img03-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img03-tab.jpg    1x,
+                      ./images/img03-tab-2x.jpg 2x
+                    "
+                    media="(max-width: 1157px)"
+                  />
+                  <source
+                    srcset="./images/img03.jpg 1x, ./images/img03-2x.jpg 2x"
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/img03.jpg"
+                    alt="Laptop & phone"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="portfolio-overlay">
                   <p class="overlay-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -382,12 +524,32 @@
             </li>
             <li class="items-portfolio">
               <div class="portfolio-thumb">
-                <img
-                  src="./images/img04.jpg"
-                  alt="Car-taxi"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/img04-mob.jpg    1x,
+                      ./images/img04-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img04-tab.jpg    1x,
+                      ./images/img04-tab-2x.jpg 2x
+                    "
+                    media="(max-width: 1157px)"
+                  />
+                  <source
+                    srcset="./images/img04.jpg 1x, ./images/img04-2x.jpg 2x"
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/img04.jpg"
+                    alt="Car-taxi"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="portfolio-overlay">
                   <p class="overlay-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -403,12 +565,32 @@
             </li>
             <li class="items-portfolio">
               <div class="portfolio-thumb">
-                <img
-                  src="./images/img05.jpg"
-                  alt="Screen Illustrations"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/img05-mob.jpg    1x,
+                      ./images/img05-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img05-tab.jpg    1x,
+                      ./images/img05-tab-2x.jpg 2x
+                    "
+                    media="(max-width: 1157px)"
+                  />
+                  <source
+                    srcset="./images/img05.jpg 1x, ./images/img05-2x.jpg 2x"
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/img05.jpg"
+                    alt="Screen Illustrations"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="portfolio-overlay">
                   <p class="overlay-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -424,12 +606,32 @@
             </li>
             <li class="items-portfolio">
               <div class="portfolio-thumb">
-                <img
-                  src="./images/img06.jpg"
-                  alt="Girl with phone in headphones"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/img06-mob.jpg    1x,
+                      ./images/img06-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img06-tab.jpg    1x,
+                      ./images/img06-tab-2x.jpg 2x
+                    "
+                    media="(max-width: 1157px)"
+                  />
+                  <source
+                    srcset="./images/img06.jpg 1x, ./images/img06-2x.jpg 2x"
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/img06.jpg"
+                    alt="Girl with phone in headphones"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="portfolio-overlay">
                   <p class="overlay-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -450,9 +652,11 @@
     <footer class="page-footer">
       <div class="container footer-inner">
         <div class="footer-container">
-          <a class="logo footer-logo" href="./index.html"
-            >Web<span class="logo-part">Studio</span></a
-          >
+          <div class="footer-logo-wrapper">
+            <a class="logo footer-logo" href="./index.html"
+              >Web<span class="logo-part">Studio</span></a
+            >
+          </div>
           <p class="footer-text">
             Increase the flow of customers and sales for your business with
             digital marketing & growth solutions.
@@ -598,9 +802,11 @@
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a class="privacy-policy-link" href="#">Privacy Policy</a></label
-            >
+              <span class="checkbox-label">
+                I accept the terms and conditions of the
+                <a class="privacy-policy-link" href="#">Privacy Policy</a>
+              </span>
+            </label>
           </div>
 
           <button class="modal-button" type="submit">Send</button>
